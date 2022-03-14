@@ -1,0 +1,7 @@
+if(isset($_POST['post'])){
+														$title=mysqli_real_escape_string($con,$_POST['post_title']);
+														$postdesc=mysqli_real_escape_string($con,$_POST['postdesc']);
+														$category=mysqli_real_escape_string($con,$_POST['category']);
+														$sql ="UPDATE `category` SET `post`=post + 1 WHERE `category_name`='$category'";
+														$query=mysqli_query($con,$sql);
+													}
